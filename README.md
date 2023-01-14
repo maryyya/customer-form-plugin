@@ -25,7 +25,7 @@
 * message_cols
 
 ## customer_form Shortcode Sample:
-1. Just put the shortcode on a post or page with or without attributes. You can change the labels, maxlength and message's rows&cols by adding the attributes. If the max length is empty then there is no maxlength.
+1. Just put the shortcode on a post or page with or without attributes. You can change the labels, maxlength and message's rows&cols by adding the attributes. If max length is empty then there is no maxlength.
 
 ### Without attributes:
 ```php
