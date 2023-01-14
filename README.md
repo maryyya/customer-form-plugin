@@ -30,6 +30,6 @@
 
 ### With attributes:
 ```php
-[customer_form name_label="asdf" name_maxlength="9" number_label="Phone Numbers" number_maxlength="8" email_label="Email Addressaa" email_maxlength="8" budget_label="Desired Budgedddt" budget_maxlength="10" message_label="Messagddes" message_maxlength="8" message_rows="10" message_cols="6"]
+[customer_form name_label="Full Name" name_maxlength="9" number_label="Phone Number" number_maxlength="8" email_label="Email Address" email_maxlength="8" budget_label="Desired Budger" budget_maxlength="10" message_label="Message" message_maxlength="8" message_rows="10" message_cols="6"]
 ```
 
