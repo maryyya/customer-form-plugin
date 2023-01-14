@@ -11,7 +11,7 @@
  * Description: Generates a customer form shortcode.
  * Version: 1.0.0
  * Requires at least: 6.1.1
- * Requires PHP: 8.0
+ * Requires PHP: 7.3.33
  * Author: Mary Padon
  * Text Domain: customer-form
  */
