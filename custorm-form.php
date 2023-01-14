@@ -6,11 +6,14 @@
  * @author        Mary Padon
  *
  * @wordpress-plugin
- * Plugin Name:   Customer Form
- * Description:   Generates a customer form shortcode.
- * Version:       1.0.0
- * Author:        Mary Padon
- * Text Domain:   customer-form
+ * Plugin Name: Customer Form
+ * Plugin URI: https://github.com/maryyya/customer-form-plugin
+ * Description: Generates a customer form shortcode.
+ * Version: 1.0.0
+ * Requires at least: 6.1.1
+ * Requires PHP: 8.0
+ * Author: Mary Padon
+ * Text Domain: customer-form
  */
 
  // Exit if accessed directly.
