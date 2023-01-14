@@ -7,7 +7,7 @@
 1. Created a plugin called `customer-form`.
 2. Inside that plugin, I created a shortcode with attributes that can be used as `[customer_form]`.
 3. I added a default value for those shortcode attributes incase there are no attributes or they are empty.
-4. These attributes can change the labels, maxlength value and message's rows&cols.
+4. These attributes can change the input labels, maxlength value and message's rows&cols.
 
 ## customer_form shortcode attributes:
 
