@@ -175,6 +175,11 @@ HTML;
          * to customer post type
          */
         function customer_form() {
+            $res = [
+                'st' => 'ok',
+                'data' => [],
+            ];
+
             $param = $_POST;
 
             $pid = wp_insert_post( [
