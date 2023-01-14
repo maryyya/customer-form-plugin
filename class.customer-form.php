@@ -132,22 +132,37 @@ if ( ! class_exists( 'Customer_Form' ) ) {
             $message_rows = isset( $atts['message_rows'] ) && !empty( $atts['message_rows'] )  ? $atts['message_rows'] : $default_val['message']['rows'];
             $message_cols = isset( $atts['message_cols'] ) && !empty( $atts['message_cols'] )  ? $atts['message_cols'] : $default_val['message']['cols'];
 
+            $form_id =  mt_rand();
+
             $html = <<<HTML
-<div id="customer-form">
+<div class="customer-form">
     <div>
-        <form method="post" action="">
-            <div class="c-label"><span class="red">*</span> {$name_label}</div>
-            <input type="text" name="name" class="name" maxlength="{$name_max}" required></input>
-            <div class="c-label">{$phone_label}</div>
-            <input type="text" name="phone-number" maxlength="{$phone_max}"></input>
-            <div class="c-label"><span class="red">*</span> {$email_label}</div>
-            <input type="email" name="email" maxlength="{$email_max}" required></input>
-            <div class="c-label">{$budget_label}</div>
-            <input type="text" name="desired-budget" maxlength="{$budget_max}"></input>
-            <div class="c-label"><span class="red">*</span> {$message_label}</div>
-            <textarea id="message" name="message" rows="{$message_rows}" cols="{$message_cols}" maxlength="{$message_max}" required></textarea>
-            <button type="submit">Register</button>
-            <div class="res_msg"></div>
+        <form method="post" action="" id="{$form_id}">
+            <div class="mb-20">
+                <div class="c-label"><span class="red">*</span> {$name_label}</div>
+                <span class="name-err input-err">Please enter your name.</span>
+                <input type="text" name="customer-name" class="name" maxlength="{$name_max}" required></input>
+            </div>
+            <div class="mb-20">
+                <div class="c-label">{$phone_label}</div>
+                <span class="phone-err input-err">asdfasdf</span>
+                <input type="text" name="phone-number" maxlength="{$phone_max}"></input>
+            </div>
+            <div class="mb-20">
+                <div class="c-label"><span class="red">*</span> {$email_label}</div>
+                <span class="email-err input-err"></span>
+                <input type="email" name="email-address" maxlength="{$email_max}" required></input>
+            </div>
+            <div class="mb-20">
+                <div class="c-label">{$budget_label}</div>
+                <input type="text" name="desired-budget" maxlength="{$budget_max}"></input>
+            </div>
+            <div class="mb-20">
+                <div class="c-label">{$message_label}</div>
+                <textarea id="message" name="message" rows="{$message_rows}" cols="{$message_cols}" maxlength="{$message_max}"></textarea>
+            </div>
+            <input type="button" class="register" value="Register">
+            <div id="res_msg"></div>
         </form>
     </div>
 </div>
@@ -160,16 +175,11 @@ HTML;
          * to customer post type
          */
         function customer_form() {
-            $res = [
-                'st' => 'ok',
-                'data' => [],
-            ];
-
             $param = $_POST;
 
             $pid = wp_insert_post( [
                 'post_title'    => $param['name'],
-                'post_content'  => 'sdfsdf',
+                'post_content'  => '',
                 'post_status'   => 'private',
                 'post_type'     => 'customer',
             ] );
@@ -186,6 +196,7 @@ HTML;
             }
 
             $res['st'] = 'ng';
+            $res['msg'] = 'Inserting new post has an error.';
             echo json_encode($res);
             exit;
         }
