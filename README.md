@@ -25,7 +25,7 @@
 * message_cols
 
 ## customer_form Shortcode Sample:
-1. Just put the shortcode on a post or page with or without attributes. You can change the labels by adding the attributes.
+1. Just put the shortcode on a post or page with or without attributes. You can change the labels, maxlength and message's rows&cols by adding the attributes.
 
 ### Without attributes:
 ```[customer_form]```
