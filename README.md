@@ -37,7 +37,7 @@
 [customer_form name_label="Full Name" name_maxlength="100" number_label="Phone Number" number_maxlength="100" email_label="Email Address" email_maxlength="100" budget_label="Desired Budger" budget_maxlength="100" message_label="Message" message_maxlength="100" message_rows="10" message_cols="6"]
 ```
 
-### Enable custom fields on editor
+### Enable custom fields on editor on the Customer post type
 This video will show you how to enable the custom fields on the editor since by default it is disabled, so it cannot be viewed. The data is there but it is not being displayed. By enabling the custom fields, you can now see the data from the customer form.
 
 https://www.youtube.com/watch?v=XG6H5BsleEw&t=25s
