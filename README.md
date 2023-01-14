@@ -6,7 +6,8 @@
 
 1. Created a plugin called `customer-form`.
 2. Inside that plugin, I created a shortcode with attributes that can be used as `[customer_form]`.
-3. I added a default value for those shortcode incase there are no attributes or they are empty.
+3. I added a default value for those shortcode attributes incase there are no attributes or they are empty.
+4. These attributes can change the labels, maxlength value and message's rows&cols.
 
 ## customer_form shortcode attributes:
 
@@ -24,6 +25,7 @@
 * message_cols
 
 ## customer_form Shortcode Sample:
+1. Just put the shortcode on a post or page with or without attributes. You can change the labels by adding the attributes.
 
 ### Without attributes:
 ```[customer_form]```
@@ -32,4 +34,3 @@
 ```php
 [customer_form name_label="Full Name" name_maxlength="9" number_label="Phone Number" number_maxlength="8" email_label="Email Address" email_maxlength="8" budget_label="Desired Budger" budget_maxlength="10" message_label="Message" message_maxlength="8" message_rows="10" message_cols="6"]
 ```
-
