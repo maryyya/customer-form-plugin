@@ -25,12 +25,14 @@
 * message_cols
 
 ## customer_form Shortcode Sample:
-1. Just put the shortcode on a post or page with or without attributes. You can change the labels, maxlength and message's rows&cols by adding the attributes.
+1. Just put the shortcode on a post or page with or without attributes. You can change the labels, maxlength and message's rows&cols by adding the attributes. If the max length is empty then there is no maxlength.
 
 ### Without attributes:
-```[customer_form]```
+```php
+[customer_form]
+```
 
 ### With attributes:
 ```php
-[customer_form name_label="Full Name" name_maxlength="9" number_label="Phone Number" number_maxlength="8" email_label="Email Address" email_maxlength="8" budget_label="Desired Budger" budget_maxlength="10" message_label="Message" message_maxlength="8" message_rows="10" message_cols="6"]
+[customer_form name_label="Full Name" name_maxlength="100" number_label="Phone Number" number_maxlength="100" email_label="Email Address" email_maxlength="100" budget_label="Desired Budger" budget_maxlength="100" message_label="Message" message_maxlength="100" message_rows="10" message_cols="6"]
 ```
